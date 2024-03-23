@@ -15,10 +15,10 @@ import Search from "./src/screens/main/Search";
 import Apps from "./src/screens/main/Apps";
 
 // Images
-import MxitIcon from "./assets/icons/mxit-03.png";
-import ContactIcon from "./assets/icons/contacts.png";
-import AppsIcon from "./assets/icons/apps_games.png";
-import SearchIcon from "./assets/icons/search.png";
+import MxitIcon from "./assets/icons/header/mxit-03.png";
+import ContactIcon from "./assets/icons/header/contacts.png";
+import AppsIcon from "./assets/icons/header/apps_games.png";
+import SearchIcon from "./assets/icons/header/search.png";
 
 const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
@@ -51,7 +51,7 @@ const AppsIconComp = () => (
 const SearchIconComp = () => (
   <Image
     source={SearchIcon}
-    style={{ width: 30, height: 30, marginTop: -5, marginLeft: -15 }}
+    style={{ width: 30, height: 30, marginTop: -5, marginLeft: -5 }}
   />
 );
 
