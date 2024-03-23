@@ -9,7 +9,7 @@ export const Login = ({ navigation }: { navigation: any }) => {
   };
 
   const handleLogin = () => {
-    navigation.navigate("Home");
+    navigation.navigate("MainStack");
   };
 
   //-- Main Return
