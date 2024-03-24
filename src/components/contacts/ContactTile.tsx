@@ -1,3 +1,4 @@
+//-- Imports
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
@@ -43,10 +44,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 70,
   },
+
   timeContainer: {
     display: "flex",
     alignItems: "center",
   },
+
   profileContainer: {
     height: 60,
     width: 60,
@@ -55,14 +58,17 @@ const styles = StyleSheet.create({
     padding: 1,
     overflow: "hidden",
   },
+
   profilePic: {
     height: "100%",
     width: "100%",
   },
+
   nameContainer: {
     width: "60%",
     marginLeft: 30,
   },
+
   nameText: {
     fontSize: 20,
     fontWeight: "200",

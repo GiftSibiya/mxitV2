@@ -74,13 +74,13 @@ const MainStack = () => (
       options={{ tabBarIcon: ContactIconComp }}
     />
     <Tab.Screen
-      name="Search"
-      component={Search}
+      name="Apps"
+      component={Apps}
       options={{ tabBarIcon: AppsIconComp }}
     />
     <Tab.Screen
-      name="Apps"
-      component={Apps}
+      name="Search"
+      component={Search}
       options={{ tabBarIcon: SearchIconComp }}
     />
   </Tab.Navigator>
