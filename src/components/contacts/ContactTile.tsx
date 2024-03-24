@@ -1,12 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 export default function ContactTile({
   name,
   color,
+  img,
 }: {
   name: string;
   color: string;
+  img: string;
 }) {
   return (
     <View style={styles.container}>
@@ -23,7 +25,9 @@ export default function ContactTile({
       <View style={styles.nameContainer}>
         <Text style={styles.nameText}>{name}</Text>
       </View>
-      <View style={styles.profileContainer}></View>
+      <View style={styles.profileContainer}>
+        <Image source={img} style={styles.profilePic} />
+      </View>
     </View>
   );
 }
@@ -49,6 +53,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     padding: 1,
+    overflow: "hidden",
+  },
+  profilePic: {
+    height: "100%",
+    width: "100%",
   },
   nameContainer: {
     width: "60%",
@@ -56,7 +65,7 @@ const styles = StyleSheet.create({
   },
   nameText: {
     fontSize: 20,
-    fontWeight: "semibold",
+    fontWeight: "200",
     color: "white",
   },
 });

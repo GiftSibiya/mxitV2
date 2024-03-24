@@ -1,9 +1,18 @@
+// Imports
 import { Image, StyleSheet, Text, View, ScrollView } from "react-native";
 import React, { Component } from "react";
 import addIcon from "../../../assets/icons/contacts/icons8-add-94.png";
 import downArrow from "../../../assets/icons/contacts/icons8-down-arrow-50.png";
 import ContactTile from "../../components/contacts/ContactTile";
 import GroupTile from "../../components/contacts/GroupTile";
+
+// Images
+import sista1 from "../../../assets/images/contacts/sista1.png";
+import sista2 from "../../../assets/images/contacts/sista2.png";
+import sista3 from "../../../assets/images/contacts/sista3.png";
+import pfp1 from "../../../assets/images/contacts/pfp1.jpeg";
+import pfp2 from "../../../assets/images/contacts/pfp2.jpeg";
+import pfp3 from "../../../assets/images/contacts/pfp3.jpeg";
 
 export class Contacts extends Component {
   render() {
@@ -33,26 +42,37 @@ export class Contacts extends Component {
             {/* -- */}
             <View style={styles.FriendsListContainer}>
               <ScrollView contentContainerStyle={styles.FriendsList}>
-                <ContactTile name="😘JUCIE LIPS😘💕 " color="green" />
-                <ContactTile name="😒Fantasticcal😘 " color="green" />
-                <ContactTile name="Candy Gal " color="orange" />
-                <ContactTile name="juicy lips " color="red" />
-                <ContactTile name="juicy lips " color="red" />
-                <ContactTile name="juicy lips " color="red" />
-                <ContactTile name="juicy lips " color="red" />
+                <ContactTile
+                  name="😘JUCIE LIPS😘💕"
+                  color="green"
+                  img={sista1}
+                />
+                <ContactTile
+                  name="ThE StIfMaIsEr😘"
+                  color="green"
+                  img={sista2}
+                />
+                <ContactTile
+                  name="🍭🍬Candy Gal🤤"
+                  color="orange"
+                  img={sista3}
+                />
+                <ContactTile name="🤑Chick Magnet 🔥" color="red" img={pfp1} />
+                <ContactTile name="juicy lips " color="red" img={pfp2} />
+                <ContactTile name="juicy lips " color="red" img={sista1} />
+                <ContactTile name="juicy lips " color="red" img={sista1} />
               </ScrollView>
             </View>
             {/* Friends Header */}
             <View style={styles.FriendsHeader}>
               <Image source={downArrow} style={styles.arrow} />
               <Text style={styles.FriendsText}>Groups</Text>
-              <Text style={styles.FriendsCounter}>(3)</Text>
+              <Text style={styles.FriendsCounter}>(2)</Text>
             </View>
             <View style={styles.FriendsListContainer}>
               <ScrollView contentContainerStyle={styles.FriendsList}>
-                <GroupTile name="Crazy Galz " />
-                <GroupTile name="Fantasticcal " />
-                <GroupTile name="Candy Gal " />
+                <GroupTile name="Crazy Galz🤩🤩 " pic={pfp3} />
+                <GroupTile name="📚Grade 6R😜 " pic={pfp2} />
               </ScrollView>
             </View>
           </ScrollView>
@@ -92,10 +112,12 @@ const styles = StyleSheet.create({
     height: "100%",
     borderRadius: 10,
     margin: 5,
+    color: "white",
   },
   addText_1: {
     fontSize: 25,
     fontWeight: "bold",
+    color: "white",
   },
   contactsContainer: {
     flex: 1,

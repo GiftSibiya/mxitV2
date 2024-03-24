@@ -1,14 +1,22 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-export default function GroupTile({ name }: { name: string }) {
+export default function GroupTile({
+  name,
+  pic,
+}: {
+  name: string;
+  pic: string;
+}) {
   return (
     <View style={styles.container}>
       <View style={styles.timeContainer}></View>
       <View style={styles.nameContainer}>
         <Text style={styles.nameText}>{name}</Text>
       </View>
-      <View style={styles.profileContainer}></View>
+      <View style={styles.profileContainer}>
+        <Image source={pic} style={styles.profilePic} />
+      </View>
     </View>
   );
 }
@@ -42,5 +50,10 @@ const styles = StyleSheet.create({
   nameText: {
     fontSize: 20,
     fontWeight: "bold",
+    color: "white",
+  },
+  profilePic: {
+    height: "100%",
+    width: "100%",
   },
 });
